@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- started on May 2, 2024 -->
+<html>
+<head>
+    <title>New Tab</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/menunav.js"></script>
+    <script src="js/homeMessages.js"></script>
+    <script src="js/gameLoader.js"></script>
+    <link rel="icon" href="img/fakechromeicon.jpg">
+    <script>
+        function deletePhoneDiv() {
+            var phoneDiv = document.querySelector(".phonediv");
+            if (phoneDiv) {
+                phoneDiv.remove();
+                console('Deleted phone div')
+            }
+        }
+
+        function phoneFullscreen() {
+            var phoneFrame = document.querySelector(".phoneframe");
+            phoneFrame.requestFullscreen();
+        }
+    </script>
+</head>
+<body>
+    <div class="updatebar">
+        <p class="updatetext">📢 v0.5 JUST DROPPED! FIFTEEN NEW GAMES, FLOOPY PHONE, AND MORE! 😎 <i>[v0.5]</i></p>
+        <a onclick="injectChangelog()"><button class="changelogminibtn">View Changelog</button></a>
+    </div>
+    <h1 id="top"><span class="floopy">Floopy</span> <span class="network">Network</span></h1>
+    <p class="undertop">Welcome to Floopy Network.</p>
+
+    <div style="position: absolute; top: 2px; left: 2px; transform: translate(-2px, 2px); border: lime solid 2px;" class="phonediv" draggable="true" ondragstart="drag(event)">
+        <button style="position: absolute; top: 0; right: 0; background-color: red; color: white; font-weight: bold; padding: 5px 10px; border: none; cursor: pointer;" onclick="deletePhoneDiv()">X</button>
+        <button style="position: absolute; top: 0; left: 0; background-color: blue; color: white; font-weight: bold; padding: 5px 10px; border: none; cursor: pointer;" onclick="phoneFullscreen()">FULLSCREEN</button>
+        <iframe src="floopyphone/index.html" width="300" height="400" class="phoneframe"></iframe>
+    </div>
+
+    <h2 style="color: deepskyblue; text-align: center;">We are now partnered with Shark Networks!</h2>
+
+    <center><img src="img/logo.jpg" alt="Logo" class="logo"></center>
+    <h2 class="rainbow-text">Top 5 Games</h2>
+    <center>
+        <div class="gamediv" onclick="deleteGameDivs(event)">
+            <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.5vXow_Z6IzzomCeIAljSTgAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
+            <p class="gameundertext">1v1.lol</p>
+        </div>
+    
+        <div class="gamediv" onclick="deleteGameDivs(event)">
+            <a>
+                <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.Osg6TzeOTsN3ybaoiM6oPAAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
+                <p class="gameundertext">Slope</p>
+            </a>
+        </div>
+
+        <div class="gamediv" onclick="deleteGameDivs(event)">
+            <a>
+                <button class="choicegamebtn"><img src="https://th.bing.com/th/id/R.f3e08e3f8db8d2baa4b1a0d244afb2f4?rik=qCQFRLzRDD8gew&pid=ImgRaw&r=0&adlt=strict" alt="Game" width="150" height="150"></button>
+                <p class="gameundertext">BitLife</p>
+            </a>
+        </div>
+
+        <div class="gamediv" onclick="deleteGameDivs(event)">
+            <a>
+                <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.HGRRtFdLoE2taBuSSluS7AAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
+                <p class="gameundertext">Tunnel Rush</p>
+            </a>
+        </div>
+
+        <div class="gamediv" onclick="deleteGameDivs(event)">
+            <a>
+                <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.7ef6C_pHSKsEqaNc0PNtEwHaHa?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
+                <p class="gameundertext">Retro Bowl</p>
+            </a>
+        </div>
+    </center>
+
+    <h2 class="rainbow-text">What is Floopy Network?</h2>
+    <center>
+        <p style="font-size: larger; font-weight: bold;" class="substitute">Floopy Network is a network of websites that are unblocked and are safe to use. Floopy Network is a project by a dumb 12 year old who is bored. The goal of Floopy Network is to help kids be entertained during class and actually have something fun to do.</p>
+    <center>
+
+    <h2 class="rainbow-text">Unblocked News</h2>
+
+    <center>
+        <p style="font-size: larger; font-weight: bold;" class="substitute"><span style="color: yellow;">6/2/2024</span> News | Floopy Phone feature just dropped! Now not only can you play games in class, you can use a phone too! Floopy Network is also now a week old!</p>
+    </center>
+
+    <h2 class="rainbow-text">What is coming next on Floopy Network?</h2>
+    <center>
+        <p style="font-size: larger; font-weight: bold;" class="substitute">There will be a search bar for games and you could filter games by category.</p>
+    <center>
+
+    
+
+    <div class="menu">
+        <p class="menu-label">Floopy Menu</p>
+        <a onclick="injectHome()"><button class="homebtn"><img src="img/home.png" alt="Home"></button></a>
+        <a onclick="injectGames()"><button class="gamebtn"><img src="img/game.png" alt="Games"></button></a>
+        <a onclick="injectApps()"><button class="appsbtn"><img src="img/apps.png" alt="Apps"></button></a>
+        <a onclick="injectfloopyweb()"><button class="floopywebbtn"><img src="img/floopyweb.png" alt="floopy Web"></button></a>
+        <button class="morebtn"><img src="img/more.png" alt="More"></button>
+    </div>
+    <div class="star"></div>
+</body>
+</html>
